@@ -6,7 +6,7 @@ https://github.com/chrisgom113/Staff-Mapper
 ```
 Walkthru Video link:
 ``` 
-TODO
+https://drive.google.com/file/d/1_LXfDKjI0v-Fc6mQaP4WUJMKPo-KIRwk/view
 ```
 
 # Description
