@@ -227,7 +227,7 @@ function updateEmployeeRole() {
     db.allEmployees()
         .then(([rows]) => {
             let employees = rows;
-            const employeeChoices = employees.map(({ id, first_name, last_name}) => ({
+            const employeeChoices = employees.map(({ id, first_name, last_name }) => ({
                 name: `${first_name} ${last_name}`,
                 value: id
             }));
@@ -240,29 +240,29 @@ function updateEmployeeRole() {
                     choices: employeeChoices
                 }
             ])
-            .then(res => {
-                let employeeId = res.employeeId;
-                db.allRoles()
-                .then(([rows]) => {
-                    let roles = rows;
-                    const roleChoices = roles.map(({ id, title}) => ({
-                        name: title,
-                        value: id
-                    }));
+                .then(res => {
+                    let employeeId = res.employeeId;
+                    db.allRoles()
+                        .then(([rows]) => {
+                            let roles = rows;
+                            const roleChoices = roles.map(({ id, title }) => ({
+                                name: title,
+                                value: id
+                            }));
 
-                    prompt([
-                        {
-                            type: "list",
-                            name: "roleId",
-                            message: "What's the employee's new role?",
-                            choices: roleChoices
-                        }
-                    ])
-                    .then(res => db.updateEmployeeRole(employeeId, res.roleId))
-                    .then(() => console.log("Employee role is updated"))
-                    .then(() => inquire())
+                            prompt([
+                                {
+                                    type: "list",
+                                    name: "roleId",
+                                    message: "What's the employee's new role?",
+                                    choices: roleChoices
+                                }
+                            ])
+                                .then(res => db.updateEmployeeRole(employeeId, res.roleId))
+                                .then(() => console.log("Employee role is updated"))
+                                .then(() => inquire())
+                        });
                 });
-            });
         })
 }
 
