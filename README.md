@@ -2,80 +2,82 @@
 
 Link to Github Repo: 
 ```
-https://github.com/chrisgom113/Express-Noting-Device
+https://github.com/chrisgom113/Staff-Mapper
 ```
-Deployed Live Heroku URL:
+Walkthru Video link:
 ``` 
-https://nameless-sands-38547.herokuapp.com/
+TODO
 ```
 
 # Description
 
-This app uses express within nodeJS to set up a locally-hosted server with multiple endpoints that deploys to a live web app using Heroku.
-The user-interface ultimately presents as a note-taking web application whereby users can view recently saved notes and enter new ones.
+This app uses employs MySql2 in order to implement database features of coding. In addition the task calls for the use of Inquirer for command line prompting as well as console.table for a more user-friendly visual rendition of the data arrays.
 
-For the first time, student is tasked with coordinating a smooth function between front-end and back-end developing. Using starter code that essentially makes up the front-end implementation of the note-taking app, student's goal is to create a server, routing points, and json reading and writing functionality to bring to life the data-saving, data-reading, and data-sending activities that make up the back-end code. Once created, and implemented, the app's back-end code is able to receive communication from front-end UI activity and react as is needed.
+The idea is to allow for a user to use command line prompting to view an employee database with specific details about the employee roles, names, departments, managers, and salaries. The featured database code also links relational data in order to link data together that may be originally stored in a separate table (per schema code). Aside from being able to survey the information, the user also has the ability to add new roles, add employees, and to further update employee information.
+
+Ideal for a manager or company owner, this app is helpful in keeping track of staff, and modifying the staff data as needed.
 
 See below for user story for context:
 
 ## User Story:
 
 ```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
+AS A business owner
+I WANT to be able to view and manage the departments, roles, and employees in my company
+SO THAT I can organize and plan my business
 ```
 
 
 # Installation
 
 
-Use 'npm i' to download the dependencies listed below:
+Uses
 
 ```
 Node.js
 
 NPM
-
-Express.js
-
-uuid
+ 
 ```
-
-
+Use 'npm i' to download the dependencies listed below:
+```
+MySQL
+Inquirer.js
+console.table
+```
 
 
 # Usage
 
-- Upon reaching landing page, user is presented with base html page and a button "Get Started.
-- Once "Get Started" button is clicked, user is taken to 'Notes' page where previously entered notes are immediately visible as well as a blanks screen for intuitive note-input
-- User can click the 'save' icon that appears once title and message have text. Upon saving, user will see note rendered in notes list
-- Upon clicking an existing note, user will find that note's data rendered in the main view
-- Upon clicking the write icon "+", user will find that the main view consists of empty fields for new notes to be entered
-- If user wants to, they can click the "delete" icon next to each saved note to remove the note from the list
+- User can invoke the program by typing "npm start". This beings the command line prompts.
+- User is presented with a list of choices including viewing certain database components, as well as add or updating database components.
+- Upon making a selection to view a database component, user is presented with a table that depicts data based on the user's selection.
+- Upon making a selection to add or update a database component, user is presented with one or more additional command prompts to clarify certain data elements.
+- User can return to the database table to view that their change has been made or updated.
+- Once finished, user can select "Quit" to end the program.
 
-## Landing Page
+## Invoke Program
 
 ![Landing Page](./assets/landing_page.png)
   
-## Notes Page with Existing Notes 
+## View Departments, Roles, and Employees
 
 ![Note Page](./assets/Notes_page.gif)
 
 
-## Enter Notes and Click Save. 
+## Add a Department
 
 ![Saved Note Appears](./assets/save_note.gif)
 
-## Clicking Existing Note Renders to Main View
+## Add a Role
 
 ![Existing Note](./assets/previous_notes.gif)
 
-## Clicking "+" Allows User to Write New Note
+## Add an Employee
 
 ![New Note](./assets/New_Note.gif)
 
-## Clicking "delete" Icon Remove Notes from Saved List
+## Update an Employee Role
 
 ![Delete Note](./assets/Delete_note.gif)
  
