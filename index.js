@@ -63,7 +63,7 @@ function inquire() {
                 case "VIEW_EMPLOYEES":
                     viewAllEmployees();
                     break;
-                case "ADD_DEPARMENT":
+                case "ADD_DEPARTMENT":
                     createDepartment();
                     break;
                 case "ADD_ROLE":
@@ -91,16 +91,6 @@ function viewAllEmployees() {
         })
         .then(() => inquire());
 }
-// View all departments
-function viewAllDepartments() {
-    db.allDepartments()
-        .then(([rows]) => {
-            let departments = rows;
-            console.log("\n");
-            console.table(departments);
-        })
-        .then(() => inquire());
-}
 //View all roles
 function viewAllRoles() {
     db.allRoles()
@@ -111,12 +101,22 @@ function viewAllRoles() {
         })
         .then(() => inquire());
 }
+// View all departments
+function viewAllDepartments() {
+    db.allDepartments()
+        .then(([rows]) => {
+            let departments = rows;
+            console.log("\n");
+            console.table(departments);
+        })
+        .then(() => inquire());
+}
 // Add role
 function createRole() {
     db.allDepartments()
         .then(([rows]) => {
             let departments = rows;
-            const departmentChoices = departments.map(([id, name]) => ({
+            const departmentChoices = departments.map(({id, name}) => ({
                 name: name,
                 value: id
             }));
@@ -150,6 +150,7 @@ function createDepartment() {
             message: "What is the name of the deparment"
         }
     ]).then(res => {
+        let name = res;
         db.addDepartment(name)
             .then(() => console.log(`Added ${name.name} to the database`))
             .then(() => inquire())
