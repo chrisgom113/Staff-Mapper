@@ -58,28 +58,28 @@ console.table
 
 ## Invoke Program
 
-![Landing Page](./assets/landing_page.png)
+![Invoke program](./assets/invoke_prgm.png)
   
 ## View Departments, Roles, and Employees
 
-![Note Page](./assets/Notes_page.gif)
+![view tables](./assets/view_data_tables.gif)
 
 
 ## Add a Department
 
-![Saved Note Appears](./assets/save_note.gif)
+![Add dept.](./assets/add_dept.gif)
 
 ## Add a Role
 
-![Existing Note](./assets/previous_notes.gif)
+![Add role](./assets//add_role.gif)
 
 ## Add an Employee
 
-![New Note](./assets/New_Note.gif)
+![Add emp](./assets/add_employee.gif)
 
 ## Update an Employee Role
 
-![Delete Note](./assets/Delete_note.gif)
+![Update role](./assets/update_role.gif)
  
 # License
 
