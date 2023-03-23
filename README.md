@@ -31,15 +31,14 @@ SO THAT I can organize and plan my business
 # Installation
 
 
-Uses
+Tech
 
 ```
 Node.js
 
 NPM
- 
 ```
-Use 'npm i' to download the dependencies listed below:
+Use 'npm i' to download the dependencies:
 ```
 MySQL
 Inquirer.js
